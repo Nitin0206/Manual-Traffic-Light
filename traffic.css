@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #8fd4ef;
+    margin: 0;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: -5px;
+}
+
+.rules {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 40px;
+}
+
+.scene {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.road {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    background-color: #333;
+}
+
+.road::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: white;
+    background: repeating-linear-gradient(90deg, white, white 20px, transparent 20px, transparent 40px);
+}
+
+.traffic-light-container {
+    position: absolute;
+    left: 47.5%;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.traffic-light {
+    width: 60px;
+    background: black;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pole {
+    width: 20px;
+    height: 120px;
+    background: black;
+    margin-top: -5px; 
+}
+
+.light {
+    width: 40px;
+    height: 40px;
+    margin: 10px 0;
+    border-radius: 50%;
+    background: gray;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
